@@ -1,0 +1,19 @@
+.header {
+  height: 80px;
+  background: crimson;
+  .header-container {
+    display: flex;
+    width: 70%;
+    margin-left: 15%;
+    justify-content: space-between;
+    color: azure;
+    align-items: center;
+    h3 a {
+      text-decoration: none;
+    }
+    h3 a:visited {
+      color: azure;
+    }
+  }
+}
+

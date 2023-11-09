@@ -1,0 +1,6 @@
+<div class="device-list" *ngIf="productService.product.rows">
+  <app-device class="device"
+    *ngFor="let product of productService.product.rows; let i = index"
+  [device]="product"
+  ></app-device>
+</div>

@@ -1,0 +1,13 @@
+.device-list {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin:  10px 15%;
+  flex-wrap: wrap;
+  .device {
+    width: 30%;
+    border: crimson 2px solid;
+    border-radius: 10px;
+    margin: 5px;
+  }
+}

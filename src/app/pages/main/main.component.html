@@ -1,0 +1,23 @@
+<div class="main-page">
+
+  <h2 *ngIf="loading">Loading...</h2>
+
+  <h2 class="main-page-header">Товар дня:</h2>
+  <div *ngIf="productService.device as device" class="main-page-device">
+    <img class="main-page-device_image" [src]="url + device.img" [alt]="device.name">
+
+    <div class="main-page-device_info">
+      <h2>{{ device.name }}</h2>
+      <h3>Цена: {{ device.price }} Руб.</h3>
+      <p>Оценка: {{ device.rating }}</p>
+      <button>В корзину</button>
+    </div>
+  </div>
+  <h3>Популярные товары:</h3>
+  <div class="main-page_device-list" *ngIf="productService.product.rows">
+    <app-device class="main-page_device-item"
+                *ngFor="let product of productService.product.rows; let i = index"
+                [device]="product"
+    ></app-device>
+  </div>
+</div>
