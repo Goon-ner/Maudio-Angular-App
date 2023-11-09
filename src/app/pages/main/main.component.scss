@@ -9,13 +9,16 @@
   }
   .main-page-device {
     display: flex;
+    align-items: center;
+    justify-content: center;
     .main-page-device_image {
       width: 55%;
     }
     .main-page-device_info {
       display: flex;
+      height: 200px;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       text-align: center;
     }
     button {
@@ -25,7 +28,12 @@
       color: azure;
       padding: 5px;
       font-size: 16px;
+      cursor: pointer;
     }
+    button:active {
+      transform: scale(95%);
+    }
+
   }
   .main-page_device-list {
     max-height: 100%;

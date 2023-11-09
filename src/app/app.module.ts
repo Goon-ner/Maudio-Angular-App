@@ -16,6 +16,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {AppRouterModule} from "./routing/app-router/app-router.module";
 import {NgOptimizedImage} from "@angular/common";
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

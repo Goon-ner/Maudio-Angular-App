@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {ProductsService} from "../../sevices/products.service";
+import {ProductsService} from "../../services/products.service";
 import {ActivatedRoute} from "@angular/router";
+import {BasketService} from "../../services/basket.service";
 
 @Component({
   selector: 'app-main',
@@ -15,6 +16,7 @@ export class MainComponent {
 
   constructor(
     public productService: ProductsService,
+    public basketService: BasketService,
     private route: ActivatedRoute
   ) {
   }

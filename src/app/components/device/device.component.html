@@ -1,5 +1,6 @@
-<div routerLink={{device.id}} class="device-item">
-  <img [src]="url + device.img" [alt]="device.name">
-  <h3>{{device.name}}</h3>
+<div class="device-item">
+  <img routerLink={{device.id}} [src]="url + device.img" [alt]="device.name">
+  <h3 routerLink={{device.id}} >{{device.name}}</h3>
   <h3>{{device.price}} руб.</h3>
+  <button (click)="basketService.addBasket(device)" >В корзину</button>
 </div>

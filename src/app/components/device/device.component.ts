@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {IDevice} from "../../models/device";
+import {BasketService} from "../../services/basket.service";
 
 @Component({
   selector: 'app-device',
@@ -7,6 +8,11 @@ import {IDevice} from "../../models/device";
   styleUrls: ['./device.component.scss']
 })
 export class DeviceComponent {
+
+  constructor(
+    public basketService: BasketService
+  ) {
+  }
 
   @Input() device: IDevice
 

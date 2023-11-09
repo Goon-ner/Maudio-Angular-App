@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import {ProductsService} from "../../sevices/products.service";
+import {Component, Input} from '@angular/core';
+import {ProductsService} from "../../services/products.service";
 import {ActivatedRoute} from "@angular/router";
+import {BasketService} from "../../services/basket.service";
 
 @Component({
   selector: 'app-device-page',
@@ -12,9 +13,12 @@ export class DevicePageComponent {
   id: string
   url:string = 'http://localhost:5000/'
 
+
+
   constructor(
     public productService: ProductsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public basketService: BasketService
   ) {}
   ngOnInit(): void {
     this.loading = true

@@ -10,7 +10,7 @@
       <h2>{{ device.name }}</h2>
       <h3>Цена: {{ device.price }} Руб.</h3>
       <p>Оценка: {{ device.rating }}</p>
-      <button>В корзину</button>
+      <button (click)="basketService.addBasket(device)" >В корзину</button>
     </div>
   </div>
   <h3>Популярные товары:</h3>

@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {ProductsService} from "../../sevices/products.service";
+import {ProductsService} from "../../services/products.service";
 
 @Component({
   selector: 'app-device-list',
