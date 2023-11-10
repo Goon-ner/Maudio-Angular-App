@@ -1,6 +1,18 @@
-<div class="device-list" *ngIf="productService.product.rows">
-  <app-device class="device"
-    *ngFor="let product of productService.product.rows; let i = index"
-  [device]="product"
-  ></app-device>
+<div>
+  <input class="search-device" placeholder="Найти товар..." [(ngModel)]="term">
+  <div class="brandFilter">
+    <button (click)="brand('1')">Apple</button>
+    <button (click)="brand('5')">Samsung</button>
+    <button (click)="brand('3')">Honor</button>
+    <button (click)="brand('9')">Xiaomi</button>
+    <button (click)="brand('')">Сброс</button>
+
+  </div>
+  <div class="device-list" *ngIf="productService.product?.rows">
+    <app-device class="device"
+                *ngFor="let product of productService.product.rows | searchProducts: term; let i = index"
+                [device]="product"
+    ></app-device>
+  </div>
 </div>
+

@@ -26,4 +26,8 @@ export class ProductsService {
   getOne(id:string): Observable<IDevice>{
     return this.http.get<IDevice>(`http://localhost:5000/api/device/${id}`).pipe(tap(device => this.device = device))
   }
+  getByBrand(brand:string): Observable<IProduct>{
+    return this.http.get<IProduct>(`http://localhost:5000/api/device?brandId=${brand}`
+    ).pipe(tap(prod => this.product = prod))
+  }
 }

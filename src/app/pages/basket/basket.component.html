@@ -13,8 +13,12 @@
         <img [src]="url + device.img" alt="device.id">
         <h3>{{device.name}}</h3>
         <h3>{{device.price}} руб.</h3>
-        <button>Удалить</button>
+        <button (click)="basketService.removeDevice(device.id)">Удалить</button>
       </div>
     </div>
+  </div>
+  <div class="total-price" *ngIf="sum">
+    <h3>Общая сумма: {{sum}} руб.</h3>
+    <button>К оформлению</button>
   </div>
 </div>

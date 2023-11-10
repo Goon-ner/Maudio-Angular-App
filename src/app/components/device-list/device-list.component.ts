@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ProductsService} from "../../services/products.service";
 
 @Component({
@@ -8,8 +8,14 @@ import {ProductsService} from "../../services/products.service";
 })
 
 
-export class DeviceListComponent {
+export class DeviceListComponent implements OnInit{
 
+  term: string = ''
+
+
+  brand(brand:string) {
+    this.productService.getByBrand(brand).subscribe()
+  }
   constructor(
     public productService: ProductsService
   ) {

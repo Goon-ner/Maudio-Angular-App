@@ -15,6 +15,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {AppRouterModule} from "./routing/app-router/app-router.module";
 import {NgOptimizedImage} from "@angular/common";
+import { SearchProductsPipe } from './pipes/search-products.pipe';
 
 
 
@@ -28,7 +29,8 @@ import {NgOptimizedImage} from "@angular/common";
     DeviceListComponent,
     ShopComponent,
     DevicePageComponent,
-    BasketComponent
+    BasketComponent,
+    SearchProductsPipe
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 70%;
-  min-height: 800px;
+  min-height: 760px;
   margin: 10px 15%;
   text-align: center;
   .basket-page_device {
@@ -32,7 +32,7 @@
     }
   }
   .basket-page_empty {
-    min-height: 800px;
+    min-height: 735px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,6 +44,24 @@
 
     .basket-page_link:active {
       color: crimson;
+      transform: scale(0.95);
+    }
+  }
+  .total-price {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 20px;
+    > button {
+      margin-top: 10px;
+      padding: 10px;
+      color: azure;
+      font-size: 16px;
+      background: crimson;
+      border-radius: 10px;
+      border: none;
+    }
+    > button:active {
       transform: scale(0.95);
     }
   }

@@ -1,6 +1,5 @@
 .device-list {
   display: flex;
-  justify-content: space-between;
   width: 70%;
   margin:  10px 15%;
   flex-wrap: wrap;
@@ -8,6 +7,35 @@
     width: 30%;
     border: crimson 2px solid;
     border-radius: 10px;
-    margin: 5px;
+    margin: 1.3%;
+  }
+}
+.search-device {
+  display: flex;
+  width: 30%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+  border: crimson 1px solid;
+  border-radius: 10px;
+}
+.search-device:focus {
+  outline: none;
+}
+.brandFilter {
+  display: flex;
+  justify-content: center;
+  > button {
+    font-size: 14px;
+    width: 75px;
+    color: azure;
+    background: crimson;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 0 5px;
+  }
+  > button:active {
+    transform: scale(0.95);
   }
 }
