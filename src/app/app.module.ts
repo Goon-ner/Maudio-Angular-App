@@ -16,6 +16,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {AppRouterModule} from "./routing/app-router/app-router.module";
 import {NgOptimizedImage} from "@angular/common";
 import { SearchProductsPipe } from './pipes/search-products.pipe';
+import { AuthPageComponent } from './pages/auth-page/auth-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 
 
@@ -30,7 +32,9 @@ import { SearchProductsPipe } from './pipes/search-products.pipe';
     ShopComponent,
     DevicePageComponent,
     BasketComponent,
-    SearchProductsPipe
+    SearchProductsPipe,
+    AuthPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

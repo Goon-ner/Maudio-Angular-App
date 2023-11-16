@@ -1,0 +1,8 @@
+<div class="login-page">
+  <form [formGroup]="loginForm" (ngSubmit)="login()" class="login-form">
+    <input formControlName="email" type="email" placeholder="Введите Email">
+    <input formControlName="password" type="password" placeholder="Введите пароль">
+    <button type="submit">Войти</button>
+  </form>
+</div>
+

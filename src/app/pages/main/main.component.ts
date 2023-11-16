@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {ProductsService} from "../../services/products.service";
-import {ActivatedRoute} from "@angular/router";
+import {Router} from "@angular/router";
 import {BasketService} from "../../services/basket.service";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-main',
@@ -13,11 +14,13 @@ export class MainComponent {
   loading = false
   id: string = '63'
   url: string = 'http://localhost:5000/'
+  navigate() {this.router.navigate(['/login'])}
 
   constructor(
     public productService: ProductsService,
     public basketService: BasketService,
-    private route: ActivatedRoute
+    private router: Router,
+    public authService: AuthService
   ) {
   }
 

@@ -1,0 +1,8 @@
+<div class="auth-page">
+  <form [formGroup]="authForm" (ngSubmit)="auth()" class="auth-form">
+    <input formControlName="email" type="email" placeholder="Введите Email">
+    <input formControlName="password" type="password" placeholder="Введите пароль">
+    <button type="submit">Регистрация</button>
+  </form>
+</div>
+

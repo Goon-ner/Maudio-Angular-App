@@ -3,18 +3,26 @@
   align-items: center;
   height: 80px;
   background: crimson;
-  .header-container {
+  .header-container-log,
+  .header-container-unlog{
     display: flex;
     width: 70%;
     margin-left: 15%;
     justify-content: space-between;
     align-items: center;
     color: azure;
-    h3 a {
+    h3 {
       text-decoration: none;
+      cursor: pointer;
     }
-    h3 a:visited {
+    h3:visited {
       color: azure;
+    }
+    .login {
+      display: flex;
+      h3 {
+        margin: 5px;
+      }
     }
   }
 }

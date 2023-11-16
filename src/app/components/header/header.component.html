@@ -1,15 +1,37 @@
 <div class="header">
-  <div class="header-container">
+  <div *ngIf="authService.isAuth" class="header-container-log">
     <h1>M.Audio</h1>
-    <h3>
-      <a routerLink="/">Главная</a>
+    <h3 routerLink="/">
+      Главная
     </h3>
-    <h3>
-      <a routerLink="/shop">Магазин</a>
+    <h3 routerLink="/shop">
+      Магазин
     </h3>
-    <h3>
-      <a routerLink="/basket">Корзина</a>
+    <h3 routerLink="/basket">
+      Корзина
     </h3>
+    <h3 (click)="authService.logout()">
+      Выйти
+    </h3>
+  </div>
+
+  <div *ngIf="!authService.isAuth" class="header-container-unlog">
+    <h1>M.Audio</h1>
+    <h3 routerLink="/">
+      Главная
+    </h3>
+    <h3 routerLink="/shop">
+      Магазин
+    </h3>
+    <div class="login">
+      <h3 routerLink="/login">
+        Войти
+      </h3>
+      <h3 routerLink="/auth">
+        Регистрация
+      </h3>
+    </div>
+
   </div>
 
 </div>

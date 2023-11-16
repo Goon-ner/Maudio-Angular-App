@@ -1,6 +1,8 @@
 import {Component, Input} from '@angular/core';
 import {IDevice} from "../../models/device";
 import {BasketService} from "../../services/basket.service";
+import {Router} from "@angular/router";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-device',
@@ -10,7 +12,9 @@ import {BasketService} from "../../services/basket.service";
 export class DeviceComponent {
 
   constructor(
-    public basketService: BasketService
+    public basketService: BasketService,
+    private router: Router,
+    public authService: AuthService
   ) {
   }
 
@@ -18,4 +22,5 @@ export class DeviceComponent {
 
   url:string = 'http://localhost:5000/'
 
+  navigate() {this.router.navigate(['/login'])}
 }

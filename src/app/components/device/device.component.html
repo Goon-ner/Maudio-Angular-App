@@ -2,5 +2,6 @@
   <img routerLink={{device.id}} [src]="url + device.img" [alt]="device.name">
   <h3 routerLink={{device.id}} >{{device.name}}</h3>
   <h3>{{device.price}} руб.</h3>
-  <button (click)="basketService.addBasket(device)" >В корзину</button>
+  <button *ngIf="authService.isAuth" (click)="basketService.addBasket(device)" >В корзину</button>
+  <button *ngIf="!authService.isAuth" (click)="navigate()" >В корзину</button>
 </div>
